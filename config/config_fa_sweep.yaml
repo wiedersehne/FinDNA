@@ -1,0 +1,30 @@
+command:
+  - python3
+  - hyper_search.py
+method: bayes
+metric:
+  goal: maximize
+  name: test_mcc
+parameters:
+  batch_size:
+    values:
+      - 128
+      - 64
+  learning_rate:
+    values:
+      - 0.0005
+      - 0.0003
+  n_epochs:
+    values:
+      - 20
+      - 25
+  block_num:
+    values:
+      - 2
+      - 3
+      - 4
+  group_size:
+    values:
+      - 40
+      - 44
+program: hyper_search.py

@@ -1,0 +1,676 @@
+Pretraining:
+  training:
+    n_epochs: 30
+    n_cores: 28
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+    batch_size: 4
+    max_len: 100000
+    n_warmup_steps: 40000
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.0003
+    save_every: 2000
+  SwanDNA:
+    input_size: 5
+    embedding_size: 144
+    max_len: 100000
+    group_size: 8
+    hidden_size: 256
+    mlp_dropout: 0
+    layer_dropout: 0
+    prenorm: None
+    norm: None
+H3:
+  training:
+    name: EMP/H3
+    pretrained: True
+    batch_size: 32
+    n_warmup_steps: 0.3
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.0005
+    save_every: 2500
+    n_epochs: 20
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 308
+    max_len: 500
+    group_size: 38
+    hidden_size: 512
+    mlp_dropout: 0.1
+    layer_dropout: 0.1
+    prenorm: "None"
+    norm: "None"
+    block_num: 4
+H3K4me1:
+  training:
+    name: H3K4me1
+    pretrained: True
+    batch_size: 32
+    n_warmup_steps: 0.3
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.0005
+    save_every: 2500
+    n_epochs: 20
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 308
+    max_len: 500
+    group_size: 40
+    hidden_size: 512
+    mlp_dropout: 0
+    layer_dropout: 0
+    prenorm: "None"
+    norm: "None"
+    block_num: 4
+H3K4me2:
+  training:
+    name: H3K4me2
+    pretrained: True
+    batch_size: 32
+    n_warmup_steps: 0.3
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.0005
+    save_every: 2500
+    n_epochs: 20
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 308
+    max_len: 500
+    group_size: 38
+    hidden_size: 512
+    mlp_dropout: 0.1
+    layer_dropout: 0.1
+    prenorm: "None"
+    norm: "None"
+    block_num: 4
+H3K4me3:
+  training:
+    name: H3K4me3
+    pretrained: True
+    batch_size: 32
+    n_warmup_steps: 0.3
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.0005
+    save_every: 2500
+    n_epochs: 20
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 308
+    max_len: 500
+    group_size: 38
+    hidden_size: 512
+    mlp_dropout: 0.1
+    layer_dropout: 0.1
+    prenorm: "None"
+    norm: "None"
+    block_num: 4
+H3K14ac:
+  training:
+    name: H3K14ac
+    pretrained: True
+    batch_size: 32
+    n_warmup_steps: 0.3
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.0005
+    save_every: 2500
+    n_epochs: 20
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 308
+    max_len: 500
+    group_size: 38
+    hidden_size: 512
+    mlp_dropout: 0.1
+    layer_dropout: 0.1
+    prenorm: "None"
+    norm: "None"
+    block_num: 4
+H3K36me3:
+  training:
+    name: H3K36me3
+    pretrained: True
+    batch_size: 32
+    n_warmup_steps: 0.3
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.0005
+    save_every: 2500
+    n_epochs: 20
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 308
+    max_len: 500
+    group_size: 40
+    hidden_size: 512
+    mlp_dropout: 0
+    layer_dropout: 0
+    prenorm: "None"
+    norm: "None"
+    block_num: 4
+H4:
+  training:
+    name: H4
+    pretrained: True
+    batch_size: 32
+    n_warmup_steps: 0.3
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.0005
+    save_every: 2500
+    n_epochs: 20
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 308
+    max_len: 500
+    group_size: 40
+    hidden_size: 512
+    mlp_dropout: 0.1
+    layer_dropout: 0.1
+    prenorm: "None"
+    norm: "None"
+    block_num: 4
+H4ac:
+  training:
+    name: H4ac
+    pretrained: True
+    batch_size: 32
+    n_warmup_steps: 0.3
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.0005
+    save_every: 2500
+    n_epochs: 20
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 308
+    max_len: 500
+    group_size: 40
+    hidden_size: 512
+    mlp_dropout: 0
+    layer_dropout: 0
+    prenorm: "None"
+    norm: "None"
+    block_num: 4
+H3K79me3:
+  training:
+    name: H3K79me3
+    pretrained: True
+    batch_size: 32
+    n_warmup_steps: 0.3
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.0005
+    save_every: 2500
+    n_epochs: 20
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 308
+    max_len: 500
+    group_size: 40
+    hidden_size: 512
+    mlp_dropout: 0
+    layer_dropout: 0
+    prenorm: "None"
+    norm: "None"
+    block_num: 4
+H3K9ac:
+  training:
+    name: H3K9ac
+    pretrained: True
+    batch_size: 32
+    n_warmup_steps: 0.3
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.0005
+    save_every: 2500
+    n_epochs: 20
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 308
+    max_len: 500
+    group_size: 40
+    hidden_size: 512
+    mlp_dropout: 0
+    layer_dropout: 0
+    prenorm: "None"
+    norm: "None"
+    block_num: 4
+Splice:
+  training:
+    name: Splice
+    pretrained: True
+    batch_size: 64
+    n_warmup_steps: 0.1
+    n_cycles: 0.5
+    weight_decay: 0.01
+    learning_rate: 0.00005
+    save_every: 2500
+    n_epochs: 20
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 3
+    embedding_size: 308
+    max_len: 400
+    group_size: 34
+    hidden_size: 512
+    mlp_dropout: 0.1
+    layer_dropout: 0.1
+    prenorm: "None"
+    norm: "None"
+    block_num: 4
+virus:
+  training:
+    name: virus
+    pretrained: True
+    batch_size: 256
+    n_warmup_steps: 0.3
+    n_cycles: 0.5
+    weight_decay: 0.01
+    learning_rate: 0.001
+    save_every: 2500
+    n_epochs: 100
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 9
+    embedding_size: 308
+    max_len: 999
+    group_size: 28
+    hidden_size: 512
+    mlp_dropout: 0.1
+    layer_dropout: 0.1
+    prenorm: "None"
+    norm: "None"
+    block_num: 4
+Prom_notata:
+  training:
+    name: Prom_notata
+    pretrained: True
+    batch_size: 512
+    n_warmup_steps: 0.3
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.0005
+    save_every: 2500
+    n_epochs: 10
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 308
+    max_len: 70
+    group_size: 44
+    hidden_size: 512
+    mlp_dropout: 0.1
+    layer_dropout: 0.1
+    prenorm: "None"
+    norm: "None"    
+    block_num: 4
+Prom_tata:
+  training:
+    name: Prom_tata
+    pretrained: True
+    batch_size: 32
+    n_warmup_steps: 0.3
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.0005
+    save_every: 2500
+    n_epochs: 10
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 308
+    max_len: 70
+    group_size: 44
+    hidden_size: 512
+    mlp_dropout: 0.2
+    layer_dropout: 0.2
+    prenorm: "None"
+    norm: "None"    
+    block_num: 4
+Prom_all:
+  training:
+    name: Prom_all
+    pretrained: True
+    batch_size: 32
+    n_warmup_steps: 0.3
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.0005
+    save_every: 2500
+    n_epochs: 10
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 308
+    max_len: 70
+    group_size: 44
+    hidden_size: 512
+    mlp_dropout: 0.1
+    layer_dropout: 0.1
+    prenorm: "None"
+    norm: "None"    
+    block_num: 4
+Prom_300_notata:
+  training:
+    name: Prom_300_notata
+    pretrained: True
+    batch_size: 32
+    n_warmup_steps: 0.3
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.0005
+    save_every: 2500
+    n_epochs: 10
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 308
+    max_len: 300
+    group_size: 36
+    hidden_size: 512
+    mlp_dropout: 0.1
+    layer_dropout: 0.1
+    prenorm: "None"
+    norm: "None"
+    block_num: 4
+Prom_300_tata:
+  training:
+    name: Prom_300_tata
+    pretrained: True
+    batch_size: 32
+    n_warmup_steps: 0.3
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.0005
+    save_every: 2500
+    n_epochs: 10
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 308
+    max_len: 300
+    group_size: 34
+    hidden_size: 512
+    mlp_dropout: 0
+    layer_dropout: 0
+    prenorm: "None"
+    norm: "None"
+    block_num: 4
+Prom_300_all:
+  training:
+    name: Prom_300_all
+    pretrained: True
+    batch_size: 256
+    n_warmup_steps: 0.3
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.0005
+    save_every: 2500
+    n_epochs: 20
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 308
+    max_len: 300
+    group_size: 38
+    hidden_size: 512
+    mlp_dropout: 0.1
+    layer_dropout: 0.1
+    prenorm: "None"
+    norm: "None"
+    block_num: 4
+tf1:
+  training:
+    name: tf1
+    pretrained: True
+    batch_size: 128
+    n_warmup_steps: 0.1
+    n_cycles: 0.5
+    weight_decay: 0.01
+    learning_rate: 0.0005
+    save_every: 2500
+    n_epochs: 20
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 308
+    max_len: 101
+    group_size: 44
+    hidden_size: 512
+    mlp_dropout: 0.2
+    layer_dropout: 0.2
+    prenorm: "None"
+    norm: "None"    
+    block_num: 2
+tf2:
+  training:
+    name: tf2
+    pretrained: True
+    batch_size: 256
+    n_warmup_steps: 0.1
+    n_cycles: 0.5
+    weight_decay: 0.01
+    learning_rate: 0.0005
+    save_every: 2500
+    n_epochs: 20
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 308
+    max_len: 101
+    group_size: 44
+    hidden_size: 512
+    mlp_dropout: 0.2
+    layer_dropout: 0.2
+    prenorm: "None"
+    norm: "None"    
+    block_num: 4
+tf3:
+  training:
+    name: tf3
+    pretrained: True
+    batch_size: 256
+    n_warmup_steps: 0.1
+    n_cycles: 0.5
+    weight_decay: 0.01
+    learning_rate: 0.0005
+    save_every: 2500
+    n_epochs: 20
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 308
+    max_len: 101
+    group_size: 38
+    hidden_size: 512
+    mlp_dropout: 0.2
+    layer_dropout: 0.2
+    prenorm: "None"
+    norm: "None"    
+    block_num: 4
+MTcDNA_16k:
+  training:
+    name: MTcDNA_16k
+    pretrained: True
+    batch_size: 16
+    n_warmup_steps: 0.1
+    n_cycles: 0.5
+    weight_decay: 0.01
+    learning_rate: 0.0001
+    save_every: 2500
+    n_epochs: 50
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 308
+    max_len: 16384
+    group_size: 20
+    hidden_size: 512
+    mlp_dropout: 0.1
+    layer_dropout: 0.1
+    prenorm: "None"
+    norm: "None"    
+    block_num: 4
+MTcDNA_1k:
+  training:
+    name: MTcDNA_1k
+    pretrained: True
+    batch_size: 16
+    n_warmup_steps: 0.2
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.0001
+    save_every: 2500
+    n_epochs: 80
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 308
+    max_len: 1024
+    group_size: 28
+    hidden_size: 512
+    mlp_dropout: 0.1
+    layer_dropout: 0.1
+    prenorm: "None"
+    norm: "None"    
+    block_num: 4
+MTcDNA_4k:
+  training:
+    name: MTcDNA_4k
+    pretrained: True
+    batch_size: 16
+    n_warmup_steps: 0.2
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.0001
+    save_every: 2500
+    n_epochs: 50
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 308
+    max_len: 4096
+    group_size: 24
+    hidden_size: 512
+    mlp_dropout: 0.1
+    layer_dropout: 0.1
+    prenorm: "None"
+    norm: "None"    
+    block_num: 4
+MTcDNA_8k:
+  training:
+    name: MTcDNA_8k
+    pretrained: True
+    batch_size: 16
+    n_warmup_steps: 0.2
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.0001
+    save_every: 2500
+    n_epochs: 50
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 308
+    max_len: 8192
+    group_size: 22
+    hidden_size: 512
+    mlp_dropout: 0.1
+    layer_dropout: 0.1
+    prenorm: "None"
+    norm: "None"    
+    block_num: 4
+
+

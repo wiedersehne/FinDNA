@@ -1,0 +1,205 @@
+Pretraining:
+  training:
+    n_epochs: 30
+    n_cores: 28
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+    batch_size: 4
+    max_len: 100000
+    n_warmup_steps: 40000
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.0003
+    save_every: 2000
+  Flash:
+    input_size: 5
+    embedding_size: 144
+    max_len: 100000
+    group_size: 8
+    hidden_size: 256
+    mlp_dropout: 0
+    layer_dropout: 0
+    prenorm: None
+    norm: None
+Human_Promoter:
+  training:
+    name: human_promoter
+    pretrained: True
+    batch_size: 1024
+    n_warmup_steps: 50000
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.003
+    save_every: 2500
+    n_epochs: 300
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  Flash:
+    input_size: 5
+    output_size: 2
+    max_len: 251
+    embedding_size: 128
+    group_size: 64
+Human_Enhancers_Cohn:
+  training:
+    name: human_cohn
+    pretrained: True
+    batch_size: 1024
+    n_warmup_steps: 50000
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.0003
+    save_every: 2500
+    n_epochs: 800
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  Flash:
+    input_size: 5
+    output_size: 2
+    max_len: 500
+    embedding_size: 512
+    group_size: 256
+Demo_Human_Or_Worm:
+  training:
+    name: human_worm
+    pretrained: True
+    batch_size: 1024
+    n_warmup_steps: 50000
+    n_cycles: 0.5
+    weight_decay: 0.3
+    learning_rate: 0.1
+    save_every: 2500
+    n_epochs: 250
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  Flash:
+    input_size: 5
+    output_size: 2
+    max_len: 200
+    embedding_size: 512
+    group_size: 256
+Demo_Mouse_Enhancers:
+  training:
+    name: mouse_enhancer
+    pretrained: True
+    batch_size: 32
+    n_warmup_steps: 50000
+    n_cycles: 0.5
+    weight_decay: 0.001
+    learning_rate: 0.001
+    save_every: 2500
+    n_epochs: 200
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  Flash:
+    input_size: 5
+    output_size: 2
+    max_len: 4776
+    embedding_size: 512
+    group_size: 256
+Demo_Coding_Inter:
+  training:
+    name: coding_inter
+    pretrained: True
+    batch_size: 1024
+    n_warmup_steps: 50000
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.08
+    save_every: 2500
+    n_epochs: 300
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  Flash:
+    input_size: 5
+    output_size: 2
+    max_len: 200
+    embedding_size: 512
+    group_size: 256
+Human_Enhancers_Ensembl:
+  training:
+    name: human_ensembl
+    pretrained: True
+    batch_size: 1024
+    n_warmup_steps: 50000
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.0001
+    save_every: 2500
+    n_epochs: 80
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  Flash:
+    input_size: 5
+    output_size: 2
+    max_len: 573
+    embedding_size: 512
+    group_size: 256
+Human_Regulatory:
+  training:
+    name: human_regulatory
+    pretrained: True
+    batch_size: 1024
+    n_warmup_steps: 50000
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.0001
+    save_every: 2500
+    n_epochs: 400
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  Flash:
+    input_size: 5
+    output_size: 3
+    max_len: 802
+    embedding_size: 512
+    group_size: 256
+Human_Ocr_Ensembl:
+  training:
+    name: human_ocr
+    pretrained: True
+    batch_size: 1024
+    n_warmup_steps: 50000
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.003
+    save_every: 2500
+    n_epochs: 40
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  Flash:
+    input_size: 5
+    output_size: 2
+    max_len: 593
+    embedding_size: 512
+    group_size: 256
+Drop_Enhancer_Stark:
+  training:
+    name: drop_enhancer
+    pretrained: True
+    batch_size: 1024
+    n_warmup_steps: 50000
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.003
+    save_every: 2500
+    n_epochs: 40
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  Flash:
+    input_size: 5
+    output_size: 2
+    max_len: 4776
+    embedding_size: 512
+    group_size: 256
+

@@ -1,0 +1,165 @@
+Pretraining:
+  training:
+    n_epochs: 30
+    n_cores: 28
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+    batch_size: 64
+    max_len: 1000
+    cls: 10
+    n_warmup_steps: 40000
+    n_cycles: 0.5
+    weight_decay: 0.0003
+    learning_rate: 0.0003
+    save_every: 2500
+    out_dim: 5
+    global_crops_number: 10
+    local_crops_number: 10
+    warmup_teacher_temp: 0.04
+    teacher_temp: 0.04
+    warmup_teacher_patch_temp: 0.04
+    teacher_patch_temp: 0.07
+    warmup_teacher_temp_epochs: 30
+    lambda1: 1.0
+    lambda2: 1.0
+    pred_start_epoch: 0
+    momentum_teacher: 0.996
+  Revolution:
+    dim: 5
+    hdim1: 8
+    hdim2: 16
+    kernel_size: 3
+    n_layers: 9
+    dropout: 0.0
+  SwanDNA:
+    input_size: 5
+    embedding_size: 308
+    max_len: 1010
+    group_size: 28
+    hidden_size: 512
+    mlp_dropout: 0
+    layer_dropout: 0
+    prenorm: None
+    norm: None
+  Flash:
+    input_size: 5
+    embedding_size: 512
+    group_size: 256
+    max_len: 1010
+  Nystromformer:
+    seed: 3431
+    dim: 5
+    hdim1: 16
+    hdim2: 8
+    kernel_size: 3
+    n_layers: 4
+    n_heads: 4
+    max_len: 1000
+    batch_size: 64
+    mask_ratio: 0.3
+    real_mask: 0.8
+    lr: 0.0003
+    n_epochs: 50
+    train_num: 40000
+    n_cores: 28
+    device: "cuda"
+Fine_tuning:
+  training:
+    pretrained: True
+    batch_size: 64
+    n_warmup_steps: 50000
+    n_cycles: 0.5
+    weight_decay: 0.0003
+    learning_rate: 0.0003
+    save_every: 2500
+    n_epochs: 30
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  Deepsea:
+    output_size: 49
+  Revolution:
+    dim_in: 5
+    dim_out: 8
+    clf_dim: 16
+    ks: 3
+    layers: 10
+    max_len: 1000
+    output_size: 49
+    dropout: 0.0
+  Transformer:
+    name: "transformer"
+    dim_in: 5
+    dim_out: 16
+    clf_dim: 16
+    layers: 1
+    heads: 1
+    max_len: 1000
+    output_size: 49
+  Linformer:
+    name: "linformer"
+    dim_in: 5
+    dim_out: 16
+    clf_dim: 16
+    layers: 2
+    heads: 2
+    max_len: 20000
+    output_size: 49
+  Cosformer:
+    name: "cosformer"
+    dim_in: 5
+    dim_out: 10
+    clf_dim: 10
+    layers: 2
+    heads: 2
+    max_len: 1000
+    output_size: 49
+  Flash:
+    name: "flash"
+    dim_in: 5
+    dim_out: 64
+    clf_dim: 64
+    layers: 2
+    heads: 8
+    max_len: 1000
+    output_size: 49
+  Mega:
+    name: "mega"
+    dim_in: 5
+    dim_out: 16
+    clf_dim: 16
+    layers: 2
+    heads: 2
+    max_len: 20000
+    output_size: 49
+  S4:
+    name: "s4"
+    dim_in: 5
+    dim_out: 15
+    clf_dim: 15
+    layers: 2
+    heads: 2
+    max_len: 20000
+    output_size: 49
+  Nystromformer:
+    name: "nystromer"
+    dim_in: 5
+    dim_out: 15
+    clf_dim: 15
+    layers: 2
+    heads: 2
+    max_len: 20000
+    output_size: 49
+  Chordmixer:
+    input_size: 5
+    output_size: 49
+    embedding_size: 154
+    max_len: 1010
+    track_size: 1
+    hidden_size: 256
+    mlp_dropout: 0
+    layer_dropout: 0
+    prenorm: "None"
+    norm: "None"
+    coeff: 1

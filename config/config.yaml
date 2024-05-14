@@ -1,0 +1,103 @@
+Pretraining:
+  training:
+    n_epochs: 30
+    n_cores: 28
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+    batch_size: 64
+    max_len: 1000
+    n_warmup_steps: 40000
+    n_cycles: 0.5
+    weight_decay: 0.0003
+    learning_rate: 0.0003
+    save_every: 2500
+  SwanDNA:
+    input_size: 5
+    embedding_size: 10
+    max_len: 1000
+    group_size: 1
+    hidden_size: 16
+    mlp_dropout: 0
+    layer_dropout: 0
+    prenorm: None
+    norm: None
+  CDIL:
+    dim: 5
+    hdim1: 128
+    hdim2: 128
+    kernel_size: 3
+    n_layers: 9
+    dropout: 0.0
+Fine_tuning:
+  training:
+    pretrained: True
+    batch_size: 32
+    n_warmup_steps: 50000
+    n_cycles: 0.5
+    weight_decay: 0.0003
+    learning_rate: 0.0003
+    save_every: 2500
+    n_epochs: 20
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  Deepsea:
+    output_size: 49
+  Transformer:
+    name: "transformer"
+    dim_in: 5
+    dim_out: 16
+    clf_dim: 16
+    layers: 1
+    heads: 1
+    max_len: 1000
+    output_size: 49
+  Linformer:
+    name: "linformer"
+    dim_in: 5
+    dim_out: 16
+    clf_dim: 16
+    layers: 2
+    heads: 2
+    max_len: 20000
+    output_size: 49
+  Mega:
+    name: "mega"
+    dim_in: 5
+    dim_out: 16
+    clf_dim: 16
+    layers: 2
+    heads: 2
+    max_len: 20000
+    output_size: 49
+  S4:
+    name: "s4"
+    dim_in: 5
+    dim_out: 16
+    clf_dim: 16
+    layers: 2
+    heads: 2
+    max_len: 20000
+    output_size: 49
+  Nystromformer:
+    name: "nystromer"
+    dim_in: 5
+    dim_out: 16
+    clf_dim: 16
+    layers: 2
+    heads: 2
+    max_len: 20000
+    output_size: 49
+  SwanDNA:
+    input_size: 5
+    output_size: 49
+    embedding_size: 10
+    max_len: 1000
+    group_size: 1
+    hidden_size: 16
+    mlp_dropout: 0
+    layer_dropout: 0
+    prenorm: "None"
+    norm: "None"
+    coeff: 2

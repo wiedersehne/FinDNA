@@ -1,0 +1,340 @@
+Pretraining:
+  training:
+    n_epochs: 30
+    n_cores: 28
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+    batch_size: 4
+    max_len: 100000
+    n_warmup_steps: 40000
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.0003
+    save_every: 2000
+  SwanDNA:
+    input_size: 5
+    embedding_size: 144
+    max_len: 100000
+    group_size: 8
+    hidden_size: 256
+    mlp_dropout: 0
+    layer_dropout: 0
+    prenorm: None
+    norm: None
+Human_Promoter:
+  training:
+    name: human_promoter
+    pretrained: True
+    batch_size: 1024
+    n_warmup_steps: 0.3
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.005
+    save_every: 2500
+    n_epochs: 200
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 308
+    max_len: 251
+    group_size: 50
+    hidden_size: 512
+    mlp_dropout: 0
+    layer_dropout: 0
+    prenorm: "None"
+    norm: "None"
+    coeff: 1.2
+    block_num: 4
+  CDIL:
+    dim_in: 5
+    dim_out: 128
+    output_size: 2
+    ks: 3
+    layers: 7
+    dropout: 0.0
+    max_len: 251
+Human_Enhancers_Cohn:
+  training:
+    name: human_cohn
+    pretrained: True
+    batch_size: 1024
+    n_warmup_steps: 0.1
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.001
+    save_every: 2500
+    n_epochs: 50
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 308
+    max_len: 500
+    group_size: 40
+    hidden_size: 512
+    mlp_dropout: 0.3
+    layer_dropout: 0.3
+    prenorm: "None"
+    norm: "None"
+    coeff: 1.3
+    block_num: 3
+  CDIL:
+    dim_in: 5
+    dim_out: 128
+    output_size: 2
+    ks: 3
+    layers: 8
+    dropout: 0.0
+    max_len: 500
+Demo_Human_Or_Worm:
+  training:
+    name: human_worm
+    pretrained: True
+    batch_size: 1024
+    n_warmup_steps: 0.3
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.0005
+    save_every: 2500
+    n_epochs: 100
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 308
+    max_len: 200
+    group_size: 50
+    hidden_size: 512
+    mlp_dropout: 0.2
+    layer_dropout: 0.2
+    prenorm: "None"
+    norm: "None"
+    coeff: 1.2
+    block_num: 4
+  CDIL:
+    dim_in: 5
+    dim_out: 128
+    output_size: 2
+    ks: 3
+    layers: 7
+    dropout: 0.0
+    max_len: 200
+Demo_Mouse_Enhancers:
+  training:
+    name: mouse_enhancer
+    pretrained: True
+    batch_size: 128
+    n_warmup_steps: 0.3
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.0005
+    save_every: 2500
+    n_epochs: 150
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 308
+    max_len: 4776
+    group_size: 24
+    hidden_size: 512
+    mlp_dropout: 0
+    layer_dropout: 0
+    prenorm: "None"
+    norm: "None"
+    coeff: 1.2
+    block_num: 2
+  CDIL:
+    dim_in: 5
+    dim_out: 128
+    output_size: 2
+    ks: 3
+    layers: 11
+    dropout: 0.0
+    max_len: 4776
+Demo_Coding_Inter:
+  training:
+    name: coding_inter
+    pretrained: True
+    batch_size: 1024
+    n_warmup_steps: 0.3
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.0005
+    save_every: 2500
+    n_epochs: 30
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 308
+    max_len: 200
+    group_size: 38
+    hidden_size: 512
+    mlp_dropout: 0.2
+    layer_dropout: 0.1
+    prenorm: "None"
+    norm: "None"
+    coeff: 1.2
+    block_num: 2
+  CDIL:
+    dim_in: 5
+    dim_out: 128
+    output_size: 2
+    ks: 3
+    layers: 7
+    dropout: 0.0
+    max_len: 200
+Human_Enhancers_Ensembl:
+  training:
+    name: human_ensembl
+    pretrained: True
+    batch_size: 512
+    n_warmup_steps: 0.2
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.001
+    save_every: 2500
+    n_epochs: 80
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 308
+    max_len: 573
+    group_size: 40
+    hidden_size: 512
+    mlp_dropout: 0
+    layer_dropout: 0
+    prenorm: "None"
+    norm: "None"
+    coeff: 1.2
+    block_num: 3
+  CDIL:
+    dim_in: 5
+    dim_out: 128
+    output_size: 2
+    ks: 3
+    layers: 8
+    dropout: 0.0
+    max_len: 573
+Human_Regulatory:
+  training:
+    name: human_regulatory
+    pretrained: True
+    batch_size: 512
+    n_warmup_steps: 0.2
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.0001
+    save_every: 2500
+    n_epochs: 50
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 3
+    embedding_size: 308
+    max_len: 802
+    group_size: 36
+    hidden_size: 512
+    mlp_dropout: 0.1
+    layer_dropout: 0.1
+    prenorm: "None"
+    norm: "None"
+    coeff: 1.2
+    block_num: 4
+  CDIL:
+    dim_in: 5
+    dim_out: 128
+    output_size: 3
+    ks: 3
+    layers: 9
+    dropout: 0.0
+    max_len: 802
+Human_Ocr_Ensembl:
+  training:
+    name: human_ocr
+    pretrained: True
+    batch_size: 256
+    n_warmup_steps: 0.3
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.0003
+    save_every: 2500
+    n_epochs: 50
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 308
+    max_len: 593
+    group_size: 30
+    hidden_size: 512
+    mlp_dropout: 0.3
+    layer_dropout: 0.3
+    prenorm: "None"
+    norm: "None"
+    # coeff: 1.2
+    block_num: 2
+  CDIL:
+    dim_in: 5
+    dim_out: 128
+    output_size: 2
+    ks: 3
+    layers: 8
+    dropout: 0.0
+    max_len: 593
+Drop_Enhancer_Stark:
+  training:
+    name: drop_enhancer
+    pretrained: True
+    batch_size: 1024
+    n_warmup_steps: 50000
+    n_cycles: 0.5
+    weight_decay: 0.1
+    learning_rate: 0.003
+    save_every: 2500
+    n_epochs: 40
+    device: "cuda"
+    patience: -1
+    swa_lrs: -1
+  SwanDNA:
+    input_size: 5
+    output_size: 2
+    embedding_size: 154
+    max_len: 593
+    group_size: 20
+    hidden_size: 256
+    mlp_dropout: 0
+    layer_dropout: 0
+    prenorm: "None"
+    norm: "None"
+    coeff: 1.2
+    block_num: 4
+  CDIL:
+    dim_in: 5
+    dim_out: 128
+    output_size: 2
+    ks: 3
+    layers: 9
+    dropout: 0.0
+    max_len: 593
+

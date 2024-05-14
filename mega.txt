@@ -1,0 +1,281 @@
+we are running from this directory: /cluster/home/tonyu/VE_Pretraining/FinDNA
+ the name of the job is: contrast
+Th job ID is 18931222
+The job was run on these nodes: idun-04-09
+Number of nodes: 1
+We are using 1 cores
+We are using 1 cores per node
+Total of 1 cores
+2024-02-01 18:11:39.192857: I tensorflow/core/util/util.cc:169] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+[rank: 0] Global seed set to 42
+torch.Size([139804, 593, 5])
+GB_Linear_Classifier(
+  (embedding): Linear(in_features=5, out_features=308, bias=True)
+  (encoder): SwanDNANetwork(
+    (SwanDNA_blocks): ModuleList(
+      (0): SwanDNAEncoder(
+        (SwanDNA_blocks): ModuleList(
+          (0): SwanDNABlock(
+            (prenorm): Identity()
+            (norm): Identity()
+            (column_transform): Mlp(
+              (fc1): Linear(in_features=308, out_features=512, bias=True)
+              (act): GELU(approximate='none')
+              (fc2): Linear(in_features=512, out_features=308, bias=True)
+              (drop): Dropout(p=0.3, inplace=False)
+            )
+            (dropout): Dropout(p=0.3, inplace=False)
+            (shift): CircularShift()
+          )
+          (1): SwanDNABlock(
+            (prenorm): Identity()
+            (norm): Identity()
+            (column_transform): Mlp(
+              (fc1): Linear(in_features=308, out_features=512, bias=True)
+              (act): GELU(approximate='none')
+              (fc2): Linear(in_features=512, out_features=308, bias=True)
+              (drop): Dropout(p=0.3, inplace=False)
+            )
+            (dropout): Dropout(p=0.3, inplace=False)
+            (shift): CircularShift()
+          )
+          (2): SwanDNABlock(
+            (prenorm): Identity()
+            (norm): Identity()
+            (column_transform): Mlp(
+              (fc1): Linear(in_features=308, out_features=512, bias=True)
+              (act): GELU(approximate='none')
+              (fc2): Linear(in_features=512, out_features=308, bias=True)
+              (drop): Dropout(p=0.3, inplace=False)
+            )
+            (dropout): Dropout(p=0.3, inplace=False)
+            (shift): CircularShift()
+          )
+          (3): SwanDNABlock(
+            (prenorm): Identity()
+            (norm): Identity()
+            (column_transform): Mlp(
+              (fc1): Linear(in_features=308, out_features=512, bias=True)
+              (act): GELU(approximate='none')
+              (fc2): Linear(in_features=512, out_features=308, bias=True)
+              (drop): Dropout(p=0.3, inplace=False)
+            )
+            (dropout): Dropout(p=0.3, inplace=False)
+            (shift): CircularShift()
+          )
+          (4): SwanDNABlock(
+            (prenorm): Identity()
+            (norm): Identity()
+            (column_transform): Mlp(
+              (fc1): Linear(in_features=308, out_features=512, bias=True)
+              (act): GELU(approximate='none')
+              (fc2): Linear(in_features=512, out_features=308, bias=True)
+              (drop): Dropout(p=0.3, inplace=False)
+            )
+            (dropout): Dropout(p=0.3, inplace=False)
+            (shift): CircularShift()
+          )
+          (5): SwanDNABlock(
+            (prenorm): Identity()
+            (norm): Identity()
+            (column_transform): Mlp(
+              (fc1): Linear(in_features=308, out_features=512, bias=True)
+              (act): GELU(approximate='none')
+              (fc2): Linear(in_features=512, out_features=308, bias=True)
+              (drop): Dropout(p=0.3, inplace=False)
+            )
+            (dropout): Dropout(p=0.3, inplace=False)
+            (shift): CircularShift()
+          )
+          (6): SwanDNABlock(
+            (prenorm): Identity()
+            (norm): Identity()
+            (column_transform): Mlp(
+              (fc1): Linear(in_features=308, out_features=512, bias=True)
+              (act): GELU(approximate='none')
+              (fc2): Linear(in_features=512, out_features=308, bias=True)
+              (drop): Dropout(p=0.3, inplace=False)
+            )
+            (dropout): Dropout(p=0.3, inplace=False)
+            (shift): CircularShift()
+          )
+          (7): SwanDNABlock(
+            (prenorm): Identity()
+            (norm): Identity()
+            (column_transform): Mlp(
+              (fc1): Linear(in_features=308, out_features=512, bias=True)
+              (act): GELU(approximate='none')
+              (fc2): Linear(in_features=512, out_features=308, bias=True)
+              (drop): Dropout(p=0.3, inplace=False)
+            )
+            (dropout): Dropout(p=0.3, inplace=False)
+            (shift): CircularShift()
+          )
+          (8): SwanDNABlock(
+            (prenorm): Identity()
+            (norm): Identity()
+            (column_transform): Mlp(
+              (fc1): Linear(in_features=308, out_features=512, bias=True)
+              (act): GELU(approximate='none')
+              (fc2): Linear(in_features=512, out_features=308, bias=True)
+              (drop): Dropout(p=0.3, inplace=False)
+            )
+            (dropout): Dropout(p=0.3, inplace=False)
+            (shift): CircularShift()
+          )
+          (9): SwanDNABlock(
+            (prenorm): Identity()
+            (norm): Identity()
+            (column_transform): Mlp(
+              (fc1): Linear(in_features=308, out_features=512, bias=True)
+              (act): GELU(approximate='none')
+              (fc2): Linear(in_features=512, out_features=308, bias=True)
+              (drop): Dropout(p=0.3, inplace=False)
+            )
+            (dropout): Dropout(p=0.3, inplace=False)
+            (shift): CircularShift()
+          )
+        )
+      )
+      (1): SwanDNAEncoder(
+        (SwanDNA_blocks): ModuleList(
+          (0): SwanDNABlock(
+            (prenorm): Identity()
+            (norm): Identity()
+            (column_transform): Mlp(
+              (fc1): Linear(in_features=308, out_features=512, bias=True)
+              (act): GELU(approximate='none')
+              (fc2): Linear(in_features=512, out_features=308, bias=True)
+              (drop): Dropout(p=0.3, inplace=False)
+            )
+            (dropout): Dropout(p=0.3, inplace=False)
+            (shift): CircularShift()
+          )
+          (1): SwanDNABlock(
+            (prenorm): Identity()
+            (norm): Identity()
+            (column_transform): Mlp(
+              (fc1): Linear(in_features=308, out_features=512, bias=True)
+              (act): GELU(approximate='none')
+              (fc2): Linear(in_features=512, out_features=308, bias=True)
+              (drop): Dropout(p=0.3, inplace=False)
+            )
+            (dropout): Dropout(p=0.3, inplace=False)
+            (shift): CircularShift()
+          )
+          (2): SwanDNABlock(
+            (prenorm): Identity()
+            (norm): Identity()
+            (column_transform): Mlp(
+              (fc1): Linear(in_features=308, out_features=512, bias=True)
+              (act): GELU(approximate='none')
+              (fc2): Linear(in_features=512, out_features=308, bias=True)
+              (drop): Dropout(p=0.3, inplace=False)
+            )
+            (dropout): Dropout(p=0.3, inplace=False)
+            (shift): CircularShift()
+          )
+          (3): SwanDNABlock(
+            (prenorm): Identity()
+            (norm): Identity()
+            (column_transform): Mlp(
+              (fc1): Linear(in_features=308, out_features=512, bias=True)
+              (act): GELU(approximate='none')
+              (fc2): Linear(in_features=512, out_features=308, bias=True)
+              (drop): Dropout(p=0.3, inplace=False)
+            )
+            (dropout): Dropout(p=0.3, inplace=False)
+            (shift): CircularShift()
+          )
+          (4): SwanDNABlock(
+            (prenorm): Identity()
+            (norm): Identity()
+            (column_transform): Mlp(
+              (fc1): Linear(in_features=308, out_features=512, bias=True)
+              (act): GELU(approximate='none')
+              (fc2): Linear(in_features=512, out_features=308, bias=True)
+              (drop): Dropout(p=0.3, inplace=False)
+            )
+            (dropout): Dropout(p=0.3, inplace=False)
+            (shift): CircularShift()
+          )
+          (5): SwanDNABlock(
+            (prenorm): Identity()
+            (norm): Identity()
+            (column_transform): Mlp(
+              (fc1): Linear(in_features=308, out_features=512, bias=True)
+              (act): GELU(approximate='none')
+              (fc2): Linear(in_features=512, out_features=308, bias=True)
+              (drop): Dropout(p=0.3, inplace=False)
+            )
+            (dropout): Dropout(p=0.3, inplace=False)
+            (shift): CircularShift()
+          )
+          (6): SwanDNABlock(
+            (prenorm): Identity()
+            (norm): Identity()
+            (column_transform): Mlp(
+              (fc1): Linear(in_features=308, out_features=512, bias=True)
+              (act): GELU(approximate='none')
+              (fc2): Linear(in_features=512, out_features=308, bias=True)
+              (drop): Dropout(p=0.3, inplace=False)
+            )
+            (dropout): Dropout(p=0.3, inplace=False)
+            (shift): CircularShift()
+          )
+          (7): SwanDNABlock(
+            (prenorm): Identity()
+            (norm): Identity()
+            (column_transform): Mlp(
+              (fc1): Linear(in_features=308, out_features=512, bias=True)
+              (act): GELU(approximate='none')
+              (fc2): Linear(in_features=512, out_features=308, bias=True)
+              (drop): Dropout(p=0.3, inplace=False)
+            )
+            (dropout): Dropout(p=0.3, inplace=False)
+            (shift): CircularShift()
+          )
+          (8): SwanDNABlock(
+            (prenorm): Identity()
+            (norm): Identity()
+            (column_transform): Mlp(
+              (fc1): Linear(in_features=308, out_features=512, bias=True)
+              (act): GELU(approximate='none')
+              (fc2): Linear(in_features=512, out_features=308, bias=True)
+              (drop): Dropout(p=0.3, inplace=False)
+            )
+            (dropout): Dropout(p=0.3, inplace=False)
+            (shift): CircularShift()
+          )
+          (9): SwanDNABlock(
+            (prenorm): Identity()
+            (norm): Identity()
+            (column_transform): Mlp(
+              (fc1): Linear(in_features=308, out_features=512, bias=True)
+              (act): GELU(approximate='none')
+              (fc2): Linear(in_features=512, out_features=308, bias=True)
+              (drop): Dropout(p=0.3, inplace=False)
+            )
+            (dropout): Dropout(p=0.3, inplace=False)
+            (shift): CircularShift()
+          )
+        )
+      )
+    )
+  )
+  (decoder): Linear(in_features=308, out_features=2, bias=True)
+)
+Traceback (most recent call last):
+  File "/cluster/home/tonyu/VE_Pretraining/FinDNA/genomic_classification.py", line 241, in <module>
+    classify_main(cfg, "human_ocr_ensembl")
+  File "/cluster/home/tonyu/VE_Pretraining/FinDNA/genomic_classification.py", line 203, in classify_main
+    model = LightningWrapper(GB_Linear_Classifier, config, train_set, val_set, pretrained, loss, pretrained_model)
+  File "/cluster/home/tonyu/VE_Pretraining/FinDNA/genomic_classification.py", line 44, in __init__
+    pretrained = torch.load(pretrained_path, map_location='cpu')
+  File "/cluster/home/tonyu/.conda/envs/monica/lib/python3.9/site-packages/torch/serialization.py", line 771, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/cluster/home/tonyu/.conda/envs/monica/lib/python3.9/site-packages/torch/serialization.py", line 270, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/cluster/home/tonyu/.conda/envs/monica/lib/python3.9/site-packages/torch/serialization.py", line 251, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: './Pretrained_models/model_29_1000_4l_308_512_noiseandTL.pt'
