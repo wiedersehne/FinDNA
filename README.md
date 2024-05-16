@@ -1,4 +1,5 @@
 # FinDNA
+## paper https://arxiv.org/abs/2405.08538
 ## Overview of FinDNA with self-supervised learning.
 ![image](https://github.com/wiedersehne/FinDNA/blob/main/findna.png)
 ### Please load the pretained model "model_29_1000_4l_308_512_noiseandTL.pt" for all the downstream tasks.
