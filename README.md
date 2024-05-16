@@ -1,4 +1,6 @@
 # FinDNA
+## Overview of FinDNA with self-supervised learning.
+![image](https://github.com/wiedersehne/FinDNA/blob/main/findna.png)
 Please load the pretained model "model_29_1000_4l_308_512_noiseandTL.pt" for all the downstream tasks.
 ## To evaluate FinDNA on GenomicBenchmarks, you need to:
 1) Run ./data/genomic_benchmark.py to get train and test data for 8 tasks.
